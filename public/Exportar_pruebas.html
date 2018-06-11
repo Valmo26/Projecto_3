@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+/home/allan/viajes.json
+-->
+<html>
+    <head>
+        <script>
+        function loadJSON(callback){           
+            var xobj = new HttpRequest();
+                xobj.overrideMimeType("application/json");
+            xobj.open('GET', '/home/allan/viajes.json', true);
+            xobj.onreadystatechange = function() {
+                if(xobj.readyState === 4 && xobj.status === "200"){
+                    callback(xobj.responseText);
+                }
+            };
+        }
+      
+        function readTextBox(){
+            var txtinput = document.getElementById('textbox1').value;
+            alert(txtinput);
+        }
+        
+        function readJSON(){
+                alert("hola");
+                loadJson(function(response) {
+                var actual_JSON = JSON.parse(response);
+
+                });       
+        }
+        
+        
+        
+        
+        </script>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+ 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>Exportar</div>
+        <label>Coloque la ruta del archivo JSON: </label> 
+        <input type="text" id="textbox1" value="-">
+        <input type="button" value="Leer" onclick="readJSON()" />
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

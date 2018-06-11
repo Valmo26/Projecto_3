@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <script>
+            
+            var dict = {"one" : [15, 4.5],
+                        "two" : [34, 3.3],
+                        "three" : [67, 5.0],
+                         "four" : [32, 4.1]};
+            var fs = require('fs');
+            function generarJSON(){
+                var dictstring = JSON.stringify(dict);
+                
+                fs.writeFile("prueba.json", dictstring);
+            }
+        </script>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+            <form id="jsonFile" name="jsonFile" enctype="multipart/form-data" method="post">
+      <fieldset>
+        <h2>Generar .json</h2>
+         <input type='button' id='btnLoad' value='Load' onclick='generarJSON();'>
+      </fieldset>
+    </form>
+        
+    </body>
+</html>

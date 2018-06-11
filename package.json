@@ -1,0 +1,23 @@
+{
+  "name": "NodeJsWebApplication",
+  "version": "1.0.0",
+  "keywords": [
+    "util",
+    "functional",
+    "server",
+    "client",
+    "browser"
+  ],
+  "author": "allan",
+  "contributors": [],
+  "dependencies": {
+    "FileReader": "0.10.2",
+    "HTTPRequest": "0.1.1",
+    "JSONStream": "1.3.3",
+    "jQuery": "1.7.4",
+    "node-http-xhr": "1.3.4"
+  },
+  "devDependencies": {}, "scripts":{
+"start":"node main.js"}
+
+}
